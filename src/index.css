@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#label{
+  font-size: smaller;
+  font-weight: 600;
+}
+#link{
+  text-decoration: none;
+}
+#btn-link {
+  cursor: pointer;
+}
+h1 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 0%;
+  text-align: center;
+}
+h5 {
+  font-weight: 700;
+  font-size: 0.5rem;
+  background-color: yellow;
+}
+#modal {
+  background-color: #eee ;
+}
+
+
+#login {
+  background-color: rgb(178, 189, 199);
+}
