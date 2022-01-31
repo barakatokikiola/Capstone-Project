@@ -4,7 +4,9 @@ const Signup =()=>{
 
     return(
       <div>
-        <h3 className="text-danger mb-3 fw-bold">Welcome to CFS</h3>
+        <h2 className="text-danger mb-2 fw-bold">Welcome to CFS</h2>
+        
+        <h6 className="mb-3 fw-bold">Create Account </h6>
         
 <Form>
 <Form.Group className="mb-3" controlId="formBasicEmail">
