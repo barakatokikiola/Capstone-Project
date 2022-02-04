@@ -7,10 +7,9 @@ const SideLogin=()=>{
 <Container className="px-1 pt-5">
 <Col lg={true}>
 <div>
-<h3>Keep Pursuing</h3>
-<h3 className=" mb-4"> Justice</h3>
+<h3 className=" mb-4">Keep Pursuing<br/> Justice</h3>
 </div>
-<Stack gap={2} className="col-md-5 ">
+<Stack gap={2} className="col-md-6 ">
 <Button variant="danger"  className="mb-4">
 <i class="fab fa-google"></i>
     <span className="ms-2">Sign in with Google</span>

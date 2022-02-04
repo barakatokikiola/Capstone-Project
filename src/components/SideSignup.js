@@ -8,10 +8,9 @@ const SideSignup=()=>{
 <Container className="px-1">
 <Col lg={true}>
 <div>
-<h3>Be Part of The</h3>
-<h3 className=" mb-4">Solution to Injustice</h3>
+<h3 className=" mb-4">Be Part of The <br/>Solution to Injustice</h3>
 </div>
-<Stack gap={2} className="col-md-5 ">
+<Stack gap={2} className="col-md-6">
 <Button variant="danger"  className="mb-4">
 <i class="fab fa-google"></i>
     <span className="ms-2">Sign up with Google</span>

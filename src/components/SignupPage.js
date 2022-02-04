@@ -5,8 +5,8 @@ import Signup from './Signup';
 const SignupPage=()=>{
 
     return(
-        <Container>
-  <Row  className="py-5 px-3">
+        <Container className="py-5 px-3">
+  <Row  >
     <Col className="col-md-6 mt-5 mt-md-0">
         <Signup />
     </Col>

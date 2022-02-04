@@ -37,9 +37,11 @@ function MyVerticallyCenteredModal(props) {
 const Login =()=>{
   const [modalShow, setModalShow] = React.useState(false);
     return(
-<Container className="p-5" id="login">
+<Container className="p-5" id="form-bg">
+<div  className="mb-4">
 <h3 className="text-success mb-1 fw-bold">Welcome back!</h3>
-<h6 className="mb-3 fw-bold">Sign in to continue</h6>
+<h6 className="mb-3 ">Sign in to continue</h6>
+</div>
 <Form>
   <Form.Group className="mb-4" controlId="formBasicEmail">
     <Form.Label id="label">Email address</Form.Label>
