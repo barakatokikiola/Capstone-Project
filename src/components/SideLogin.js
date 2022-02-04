@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SideLogin=()=>{
 
     return(
-<Container className="px-1">
+<Container className="px-1 pt-5">
 <Col lg={true}>
 <div>
 <h3>Keep Pursuing</h3>

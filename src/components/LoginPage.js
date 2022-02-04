@@ -7,11 +7,11 @@ const LoginPage=()=>{
     return(
         <Container>
   <Row  className="py-5 px-3">
-    <Col sm={7}>
-        <SideLogin />
+    <Col className="col-md-6 mt-5 mt-md-0">
+        <Login />
     </Col>
-    <Col sm={5}>
-         <Login />
+     <Col className="col-md-6 mt-5 mt-md-0  order-md-first">
+         <SideLogin />
          </Col>
   </Row>
   </Container>

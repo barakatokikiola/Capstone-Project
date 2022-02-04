@@ -6,8 +6,9 @@ const Header=()=>{
 <Navbar bg="dark" variant="dark" expand="lg">
     <Container>
     <Navbar.Brand href="#home">
-             <h1>CFS</h1>
-        <h5 className="text-black px-auto">INTERVENTIONS</h5>
+          <div>
+          <img src={require('./images/vector.png')} alt="logo"  width="40" height="40"/>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

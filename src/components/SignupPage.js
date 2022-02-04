@@ -7,11 +7,11 @@ const SignupPage=()=>{
     return(
         <Container>
   <Row  className="py-5 px-3">
-    <Col sm={7}>
-        <SideSignup />
+    <Col className="col-md-6 mt-5 mt-md-0">
+        <Signup />
     </Col>
-    <Col sm={5}>
-         <Signup />
+    <Col className="col-md-6 mt-5 mt-md-0  order-md-first">
+         <SideSignup />
          </Col>
   </Row>
   </Container>
