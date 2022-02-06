@@ -40,13 +40,16 @@ const Signup =()=>{
   </Form.Group>
   </Col>
   <Col lg={true} >
-  <Form.Group className="mb-3">
   <Form.Label id="label">Gender</Form.Label>
-  <Form.Select size="sm">
-    <option>Select Gender</option>
-    <option>Male</option>
-    <option>Female</option>
-  </Form.Select>
+  <Form.Group className="mb-3">
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+  <label class="form-check-label" for="inlineRadio1">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+  <label class="form-check-label" for="inlineRadio2">Female</label>
+</div>
   </Form.Group>
   </Col>
   </Row>
@@ -56,8 +59,7 @@ const Signup =()=>{
     <option>Individual</option>
     <option>Organization</option>
   </Form.Select>
-    
-  <Button variant="danger" type="submit" className="w-100">
+  <Button type="submit" className="w-100">
     Sign Up
   </Button>
 </Form>

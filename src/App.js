@@ -1,6 +1,8 @@
-import Header from './components/Header';
+// import Header from './components/Header';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
+import Sidebar from './components/Sidebar';
+import Welcome from './components/Welcome';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,10 +13,12 @@ function App() {
   return (
     <Router>
    <div className='App'>
-     <Header />
+     
    <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/dashboard" element={<Sidebar />} />
+        <Route path="/welcome" element={<Welcome />} />
     </Routes>
    </div>
   </Router>

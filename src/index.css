@@ -2,16 +2,38 @@
 body{
   font-family: 'Fira Sans', sans-serif
 }
-#header {
+#header-bg {
   background-color: #08254F;
   font-family: 'Fira Sans', sans-serif
 }
+.closeButton {
+  color: #fff;
+}
 #logo {
-  height: 75px;
-width: 68px;
+height: 3rem;
+width: 2.8rem;
 left: 94px;
 top: 21px;
 }
+#sidebar-logo {
+height: 3rem;
+width: 2.8rem;
+}
+#user-img {
+  height: 2rem;
+  width: 2rem;
+  }
+#toggler {
+ border: none;
+ outline: none;
+  }
+#offcanvas{
+  background-color: #08254F;
+  font-family: 'Fira Sans', sans-serif;
+}
+/* #sidebar-footer span {
+margin
+} */
 @media screen and (max-width: 768px){
   #nav {
     border-top: solid 2px #fff;
@@ -44,3 +66,19 @@ h3 {
   background: #E8EDFD;
 
 }
+
+/* Sidebar styling */
+#footer-links {
+  font-size: 14px;
+  margin: 0 10px;
+  color: white;
+ }
+#header-links span {
+  font-size: 14px;
+  margin: 0 10px;
+ }
+ #header-links:hover {
+  color: #fff;
+  border-right: solid 2px #fff;
+  
+ }
