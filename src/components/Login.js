@@ -58,7 +58,7 @@ const Login =()=>{
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
-  <Button variant="primary" type="submit" className="w-100">
+  <Button variant="primary" type="submit" className="w-100" onClick="/welcome">
     Sign In
   </Button>
 </Form>

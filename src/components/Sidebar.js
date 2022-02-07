@@ -43,7 +43,7 @@ const Sidebar =()=>{
             <Nav className="p-5" id="header-bg">
               <Nav.Link href="#links" id="footer-links" className="justify-end">
       <i class="fas fa-sign-out-alt"></i>
-      <span className="ms-2">Logout</span>
+      <span id="adj"  className="ms-2">Logout</span>
       </Nav.Link>
               </Nav>
           </Navbar.Offcanvas>

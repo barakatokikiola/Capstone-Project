@@ -8,7 +8,6 @@ const Signup =()=>{
         <h2 className="mb-2 fw-bold" id="h2">Welcome to CFS</h2>
         <h6 className="mb-3 fw-bold">Create Account </h6>
         </div>
-       
 <Form>
 <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label id="label">Name</Form.Label>
