@@ -1,0 +1,9 @@
+.report-details{
+    background-image:linear-gradient(to bottom ,rgba(186, 199, 239, 1), rgba(1, 120, 254, 1));
+    padding: 1.5rem 1.5rem 3rem;
+    border-radius: 10px;
+}
+
+span{
+    font-weight: bold;
+}

@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 38.6px;
+}
+
+.header{
+    padding: 2rem ;
+}
+.main-section{
+    background-image: url('lady vector.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 900px;
+}
