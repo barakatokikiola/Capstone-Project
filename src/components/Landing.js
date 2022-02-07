@@ -10,7 +10,7 @@ import appsteps from "./images/app-steps.jpg";
 import sliders from "./images/Slider.jpg";
 import Report from './Report';
 import { useNavigate } from 'react-router-dom';
-import { Container, Card,Nav } from 'react-bootstrap';
+import { Button, Container, Card,Nav } from 'react-bootstrap';
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -33,8 +33,8 @@ const Landing = () => {
                         <Nav.Link href="#pricing"  >Contact</Nav.Link>
                         </Nav>
                             <div className="button">
-                                <button className="signup-cta" onClick={()=> navigate("/signup")} > Sign Up</button>
-                                <button className="signin-cta" onClick={()=> navigate("/login")}> Sign In</button>
+                                <Button className="signup-cta" onClick={()=> navigate("/signup")} > Sign Up</Button>
+                                <Button className="signin-cta" onClick={()=> navigate("/login")}> Sign In</Button>
                             </div>
                          </div>
                          </Card.Header>
@@ -80,7 +80,7 @@ const Landing = () => {
                 </div>
                   <div className="file-report ">
                     <div className="card mb-3">
-                    <div className="row g-0">
+                    <div className="row g-1">
                      <div className="col-sm-6">
                      <img src={handwriting} className="img-fluid rounded-start" alt="filing-display"/>
                     </div>
