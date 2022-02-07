@@ -59,9 +59,18 @@ const Landing = () => {
                   </Card>
 
                   <div className="container-lg py-5"> 
-                    <div className="about-us">
+                    <div className="about-us py-3">
                         <h1>About us</h1>
-                        <p>In a society where bad and corrupt practices has become the order of the day, where victims are silenced and oppressed, where the citizens are denied their human rights, where the powerful are abusing powers entrusted into them and where the common man is falling prey in the hands of those that are meant to protect them, we at THE VOICE BUILDERS organisation are stepping out as a ray of light, a beam of hope, restoring confidence, joy, peace, laughter and obtaining justice in hopeless situations. <a href="more" className="read-more">Read more...</a></p>
+                        <p className="mb-5">In a society where bad and corrupt practices has 
+                            become the order of the day, where victims are
+                             silenced and oppressed, where the citizens are denied
+                              their human rights, where the powerful are abusing powers 
+                              entrusted into them and where the common man is falling prey 
+                              in the hands of those that are meant to protect them, we at
+                               THE VOICE BUILDERS organisation are stepping out as a ray of light, 
+                               a beam of hope, restoring confidence, joy, peace, laughter and obtaining
+                                justice in hopeless situations.
+                                 <a href="more" className="read-more">Read more...</a></p>
                         <div className="statistics">
                             <div className="complaint-filed">
                                 <h3>435</h3>
@@ -108,8 +117,8 @@ const Landing = () => {
     </div>
     {/* <div className="card-footer"> */}
         <img src={avatar} alt="avavtar" className="avatar" />
-      <p className="text-muted">MUIZ ALABA</p>
-      <p className="muiz">Lagos, Nigeria</p>
+      <p className="text-muted mx-2">MUIZ ALABA</p>
+      <p className="muiz mx-2">Lagos, Nigeria</p>
     {/* </div> */}
   </div>
   <div className="card test-card">
@@ -120,8 +129,8 @@ const Landing = () => {
     {/* <div className="card-footer"> */}
    
       <img src= {avatar} className="avatar" alt="avatar"/>
-      <p className="text-muted">HENRIETTA A. </p>
-      <p className="henrietta">Kogi, Nigeria</p>
+      <p className="text-muted mx-2">HENRIETTA A. </p>
+      <p className="henrietta mx-2">Kogi, Nigeria</p>
     {/* </div> */}
   </div>
   <div className="card test-card">
@@ -131,8 +140,8 @@ const Landing = () => {
     </div>
          
          <img src={avatar} alt="avavtar-icon" className="avatar" />
-         <p className="text-muted">BARAKAT OKIKI</p>
-         <p className="barakat">Ibadan, Nigeria</p>
+         <p className="text-muted mx-2">BARAKAT OKIKI</p>
+         <p className="barakat mx-2">Ibadan, Nigeria</p>
             </div>
             </div>
             <img src={sliders} alt="sliders" className="sliders"/>
