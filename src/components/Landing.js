@@ -18,14 +18,12 @@ const Landing = () => {
     return (
         <Container className="container-lg">
             {/* background with overlay */}
-            <Card className="bg-white border-outline-none">
+            <Card className="bg-white ">
             <Card.Img  src={background} alt="background-pics" className="background-display"  />
                     <Card.ImgOverlay className="card-img-overlay">
                     <Card.Header>
-
                         <img src={logo} alt="logo" className="Logo" />
                         {/* navigation and a call to action */}
-                        
                         <div className="navigation">
                         <Nav id="nav">
                         <Nav.Link href="#home" >Home</Nav.Link>
@@ -99,7 +97,7 @@ const Landing = () => {
             </div>
             </div>
             </div>
-            <div className="testimonials">
+            <section className="testimonials">
                 <h2>TESTIMONIALS</h2>
                 <h3>What our victors say</h3>
                 <div className="card-group">
@@ -138,7 +136,7 @@ const Landing = () => {
             </div>
             </div>
             <img src={sliders} alt="sliders" className="sliders"/>
-            </div>
+            </section>
 
             <div className="anonymous py-5">
             <div className="card mb-3 anonymous">
@@ -147,7 +145,7 @@ const Landing = () => {
           <img src={anonymous} className="img-fluid rounded-start anonymous" alt="anonymous-display"/>
         </div>
 
-     <div className="col-md-6">
+     <div className="col-md-6 py-4">
       <div className="card-body anonymous">
         <h3 className="card-title">Stay anonymous <br /> while you file your <br /> complaints</h3>
         <p className="card-text">We can file your complaints while you remain anonymous. <br />We seek to safeguard and protect your identity.</p>
