@@ -15,7 +15,6 @@ const Header=()=>{
     <Nav id="nav">
       <Nav.Link href="#home" >Home</Nav.Link>
       <Nav.Link href="#features" >About us</Nav.Link>
-      <Nav.Link href="#pricing" >Report</Nav.Link>
       <Nav.Link href="#pricing"  >Rights</Nav.Link>
       <Nav.Link href="#pricing"  >Contact</Nav.Link>
     </Nav>
