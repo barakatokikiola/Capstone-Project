@@ -20,6 +20,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/dashboard" element={<Sidebar />} />
         <Route path="/welcome" element={<Welcome />} />
+        
     </Routes>
    </div>
   </Router>

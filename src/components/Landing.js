@@ -1,3 +1,4 @@
+import React from 'react';
 import background from "./images/background.jpg";
 import logo from "./images/logo.jpg";
 import handwriting from "./images/handwriting.jpg";
@@ -7,56 +8,60 @@ import anonymous from "./images/anonymous.jpg";
 import socialmedia from "./images/Socialmedia.jpg";
 import appsteps from "./images/app-steps.jpg";
 import sliders from "./images/Slider.jpg";
-
+import Report from './Report';
+import { useNavigate } from 'react-router-dom';
+import { Container, Card,Nav } from 'react-bootstrap';
 
 const Landing = () => {
+    const navigate = useNavigate();
+    const [modalShow, setModalShow] = React.useState(false);
     return (
-        <div className="container-sm">
+        <Container className="container-lg">
             {/* background with overlay */}
-            
-                <div className="card bg-white sm">
-                    <img src={background} alt="background-pics" className="background-display"/>
-                    <div className="card-img-overlay">
+            <Card className="bg-white border-outline-none">
+            <Card.Img  src={background} alt="background-pics" className="background-display"  />
+                    <Card.ImgOverlay className="card-img-overlay">
+                    <Card.Header>
+
                         <img src={logo} alt="logo" className="Logo" />
                         {/* navigation and a call to action */}
+                        
                         <div className="navigation">
-                            <ul className="nav justify-content-center">
-                                <li className="nav-item">
-                                    <a className="nav-link " href="ho">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="abt">About us</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="rt">Report</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="rr"> Rights</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="ct"> Contact</a>
-                                </li>
-                                <hr/>
-                            </ul>
+                        <Nav id="nav">
+                        <Nav.Link href="#home" >Home</Nav.Link>
+                        <Nav.Link href="#features" >About us</Nav.Link>
+                        <Nav.Link href="#pricing" >Report</Nav.Link>
+                        <Nav.Link href="#pricing"  >Rights</Nav.Link>
+                        <Nav.Link href="#pricing"  >Contact</Nav.Link>
+                        </Nav>
                             <div className="button">
-                                <button className="signup-cta" > Sign Up</button>
-                                <button className="signin-cta" > Sign In</button>
+                                <button className="signup-cta" onClick={()=> navigate("/signup")} > Sign Up</button>
+                                <button className="signin-cta" onClick={()=> navigate("/login")}> Sign In</button>
                             </div>
                          </div>
+                         </Card.Header>
                         <div className="bg-paragraph">
                             <p>Sound the alarm!</p>
                             <span  className="text-white">Got an incident we need to know about?</span>
                         </div>
                         <div className="button">
-                                <button className="report-cta"> Report a crime</button>
+                                <button className="report-cta" onClick={() => setModalShow(true)}>
+                                     Report a crime
+                                     </button>
+                                <Report
+                         show={modalShow}
+                         onHide={() => setModalShow(false)}
+                               />
                                 <button className="track-cta"> Track a report</button>
                             </div>
-                </div>
+                </Card.ImgOverlay>
                     <div className="app-steps sm">
                         <img src={appsteps} alt="workflow" className="wf-image"/>
                 </div> 
-                 <div className="container-sm"> 
-                    <section className="about-us">
+                  </Card>
+
+                  <div className="container-lg py-5"> 
+                    <div className="about-us">
                         <h1>About us</h1>
                         <p>In a society where bad and corrupt practices has become the order of the day, where victims are silenced and oppressed, where the citizens are denied their human rights, where the powerful are abusing powers entrusted into them and where the common man is falling prey in the hands of those that are meant to protect them, we at THE VOICE BUILDERS organisation are stepping out as a ray of light, a beam of hope, restoring confidence, joy, peace, laughter and obtaining justice in hopeless situations. <a href="more" className="read-more">Read more...</a></p>
                         <div className="statistics">
@@ -70,13 +75,12 @@ const Landing = () => {
                             </div>
                             <div className="complaint-filed">
                                 <h3>38</h3>
-                                <p>Ongoing Cases</p>
+                                <p>Ongoing Investigations</p>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
-                  </div>
-                  <section className="file-report ">
+                  <div className="file-report ">
                     <div className="card mb-3">
                     <div className="row g-0">
                      <div className="col-sm-6">
@@ -94,8 +98,8 @@ const Landing = () => {
           
             </div>
             </div>
-            </section>
-            <section className="testimonials">
+            </div>
+            <div className="testimonials">
                 <h2>TESTIMONIALS</h2>
                 <h3>What our victors say</h3>
                 <div className="card-group">
@@ -134,13 +138,15 @@ const Landing = () => {
             </div>
             </div>
             <img src={sliders} alt="sliders" className="sliders"/>
-            </section>
-            <section className="anonymous ">
+            </div>
+
+            <div className="anonymous py-5">
             <div className="card mb-3 anonymous">
          <div className="row g-0">
           <div className="col-md-6">
           <img src={anonymous} className="img-fluid rounded-start anonymous" alt="anonymous-display"/>
         </div>
+
      <div className="col-md-6">
       <div className="card-body anonymous">
         <h3 className="card-title">Stay anonymous <br /> while you file your <br /> complaints</h3>
@@ -152,7 +158,7 @@ const Landing = () => {
             </div>
             </div>
             </div>
-            </section>
+            </div>
             <footer className="footer-bar">
                 <img src={socialmedia} alt="social-media-icon" className="social-media-icon" />
                 <p className= "footer-p">CFS Interventions</p>
@@ -162,7 +168,7 @@ const Landing = () => {
                     <li><a href="terms">Terms of use</a></li></li>
                 </ul>
             </footer>
-        </div>
+        </Container>
     );
 }
 
