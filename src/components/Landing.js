@@ -49,7 +49,6 @@ const Landing = () => {
                          show={modalShow}
                          onHide={() => setModalShow(false)}
                                />
-                                <button className="track-cta"> Track a report</button>
                             </div>
                 </Card.ImgOverlay>
                     <div className="app-steps sm">

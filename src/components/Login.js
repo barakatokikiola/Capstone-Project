@@ -1,4 +1,7 @@
 import React from 'react';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { Container, Form, Button,Modal } from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
@@ -35,6 +38,19 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 const Login =()=>{
+  const {register, handleSubmit, formState:{errors}} = useForm();
+  const navigate = useNavigate();
+  const[error, setError] = useState("")
+  const onSubmit = (data)=>{
+      if(data.email==="example@admin.com" && data.password ==="1234"){
+          localStorage.setItem('authenticated', true)
+          alert("Login Successfully")
+      navigate("/welcome")
+      }else{
+          setError("Invalid login details");
+      }
+      
+  }
   const [modalShow, setModalShow] = React.useState(false);
     return(
 <Container className="p-5" id="form-bg">
@@ -42,14 +58,19 @@ const Login =()=>{
 <h3 className="text-success mb-1 fw-bold">Welcome back!</h3>
 <h6 className="mb-3 ">Sign in to continue</h6>
 </div>
-<Form>
+<Form onSubmit={handleSubmit(onSubmit)}>
   <Form.Group className="mb-4" controlId="formBasicEmail">
     <Form.Label id="label">Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Control type="email" placeholder="Enter email"
+     {...register("email", {required:true, maxLength:30})}/>
+     {errors.email && <p style={{color:'red'}}>Please check the email</p>}
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label id="label">Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    <Form.Control type="password" placeholder="Password" 
+    {...register("password", {required: true
+    })}
+    />
     <Form.Text className="text-black">
       <p id="btn-link" className="my-2" onClick={() => setModalShow(true)}>Forgot Password?</p>
     </Form.Text>
@@ -58,9 +79,12 @@ const Login =()=>{
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
-  <Button variant="primary" type="submit" className="w-100" onClick="/welcome">
+  <Button variant="primary" type="submit"
+   className="w-100"
+    onSubmit={handleSubmit()}>
     Sign In
   </Button>
+  <p style={{textAlign:"center", color:"red", fontSize:"1.3rem"}}>{error}</p>
 </Form>
 </Container>
     )
