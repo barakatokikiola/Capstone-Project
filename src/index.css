@@ -16,52 +16,16 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  position: relative;
-  right: -80px;
-  align-items: center;
   margin: 0 auto;
 }
-.navigation a {
-  margin-left: 5px;
-  text-decoration: none;
-  color: white;
-  padding: 0 35px;
-  font-size: 20px;
-  font-weight: normal;
-  font-family: sans-serif;
-  list-style-type: none;
-}
+
 .navigation a:hover {
   border-bottom: 4px solid dodgerblue;
   color: white;
 }
-.signup-cta {
-  background-color: dodgerblue;
-  margin-left: 50px;
-  height: 50px;
-  font-family: sans-serif;
-  width: 8rem;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-}
-.signin-cta {
-  margin-left: 30px;
-  height: 50px;
-  width: 8rem;
-  font-size: 20px;
-  border: 1px solid dodgerblue;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  background-color: transparent;
-}
 .report-cta {
   background-color: dodgerblue;
   margin-left: 50px;
-  margin-top: 40px;
   height: 50px;
   width: 8rem;
   border: none;
@@ -80,15 +44,16 @@
   cursor: pointer;
   background-color: transparent;
 }
-.nav-link a:hover {
-  border-bottom: 2px solid rgb(10, 72, 134);
+#nav-link a:hover {
+  border-bottom: 3px solid rgb(10, 72, 134);
 }
 /* App use steps styling */
 /* .app-steps {
   background-color: #f7f2f2;
   border: 2px solid black;
   border-radius: 50%;
-} */
+}  */
+
 .workflow {
   position: relative;
   display: flex;
@@ -96,10 +61,36 @@
   justify-content: center;
   text-align: center;
 }
-.wf-image {
-  width: 70rem;
-  margin-left: 50px;
-  margin-top: 0.5px;
+#signIn {
+  background-color: transparent;
+  border: 3px solid #0178FE;
+border-radius: 5px;
+}
+#headline {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 86px;
+}
+#tagline {
+  font-weight: 400;
+}
+/* #hidden {
+  visibility: hidden;
+} */
+#wf {
+  position: relative;
+}
+#wf-image {
+  position: absolute;
+  background-color: white;
+  top:  90%;
+  left: 12%;
+  padding: 1rem 2.7rem;
+  box-shadow: -1px 12px 41px 0px #DBDBDB;
+
+}
+#cbody {
+  position: absolute;
 }
 .create-acct,
 .fill-report,
@@ -118,32 +109,7 @@
   height: 35%;
   margin-left: 50px;
 }
-/* styling the About us section */
-.about-us {
-  background: #fff;
-  height: 70vh;
-}
-.about-us h1 {
-  color: #0178fe;
-  text-align: center;
-  line-height: 57px;
-  /* margin-top: 15%; */
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-}
-.about-us p {
-  color: #ada9a9;
-  line-height: 35px;
-  margin-right: 177px;
-  margin-left: 177px;
-  font-weight: normal;
-  font-size: 24px;
-}
-.about-us a {
-  text-decoration: none;
-  cursor: pointer;
-}
+
 /* statistics divs */
 .statistics {
   display: flex;
@@ -159,6 +125,7 @@
   background: rgb(255, 255, 255);
   box-shadow: 2px 2px 3px rgb(206, 205, 205);
   border: 1px solid rgb(196, 189, 189);
+  text-align: center;
 }
 .complaint-filed {
   height: 134px;
@@ -181,45 +148,7 @@
   top: 1407px;
   border-radius: 15px;
 }
-.complaint-filed p {
-  height: 30px;
-  width: 120px;
-  position: relative;
-  right: 60px;
-  top: 2.345458984375px;
-  font-family: Fira Sans;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  text-align: center;
-}
-.solved-cases p {
-  height: 38.981815338134766px;
-  width: 120px;
-  position: relative;
-  right: 60px;
-  top: 2.345458984375px;
-  font-family: Fira Sans;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 42px;
-  text-align: center;
-}
-.ongoing-inv p {
-  height: 38.981815338134766px;
-  width: 125px;
-  position: relative;
-  right: 60px;
-  top: 2.345458984375px;
-  font-family: Fira Sans;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  text-align: center;
-}
+
 
 .complaint-filed h3,
 .solved-cases h3,
@@ -232,14 +161,14 @@
 .bg-paragraph p {
   color: #fff;
   font-weight: bolder;
-  font-size: 5rem;
-  margin-top: 10rem;
+  font-size: 3rem;
+  margin-top: 3rem;
   margin-left: 50px;
 }
 span{
   color: #fff;
   margin-left: 50px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: lighter;
 }
 .anonymous {
@@ -254,7 +183,7 @@ span{
   top: 3030px;
 }
 .anonymous img {
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 .anonymous p {
@@ -355,40 +284,8 @@ span{
   font-weight: normal;
 }
 /* file-report */
-.file-report img {
-  margin: 30px;
-}
-.file-report h3 {
-  color: #0178fe;
-  height: 181px;
-  width: 470px;
-  left: 805px;
-  top: 1707px;
-  font-size: 30px;
-  font-weight: bold;
-  /* line-height: 58px; */
-  text-align: left;
-}
-.file-report p {
-  margin-top: -60px;
-  font-size: 21px;
-  width: 470px;
-  left: 805px;
-}
-.file-report button,
-.anonymous button {
-  background-color: dodgerblue;
-  margin-left: 2px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 9rem;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
+
+
 #adj {
   font-size: small;
 }

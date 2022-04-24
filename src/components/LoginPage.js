@@ -10,12 +10,13 @@ const LoginPage=()=>{
   <Header />
         <Container className="py-5 px-3">
   <Row>
-    <Col className="col-md-6 mt-5 mt-md-0">
-        <Login />
-    </Col>
-     <Col className="col-md-6 mt-5 mt-md-0  order-md-first">
+  <Col md className="col-md-6  mt-md-0">
          <SideLogin />
          </Col>
+    <Col md className="col-md-6 mt-5 mt-md-0">
+        <Login />
+    </Col>
+     
   </Row>
   </Container>
         </div>

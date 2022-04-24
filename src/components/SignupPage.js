@@ -10,12 +10,13 @@ const SignupPage=()=>{
 <Header />
         <Container className="py-5 px-3">
     <Row>
-    <Col className="col-md-6 mt-5 mt-md-0">
-        <Signup />
-    </Col>
-    <Col className="col-md-6 mt-5 mt-md-0  order-md-first">
+        <Col md className="col-md-6 mt-5 mt-md-0">
          <SideSignup />
          </Col>
+    <Col md className="col-md-6 mt-5 mt-md-0">
+        <Signup />
+    </Col>
+    
   </Row>
   </Container>
         </div>
