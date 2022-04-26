@@ -1,16 +1,18 @@
 import React from 'react';
+import { BsTwitter } from 'react-icons/bs';
+import { FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 import background from "./images/background.jpg";
 import logo from "./images/logo.jpg";
 import handwriting from "./images/handwriting.jpg";
 import staricon from "./images/5-stars.jpg";
 import avatar from "./images/Avatar.jpg";
 import anonymous from "./images/anonymous.jpg";
-import socialmedia from "./images/Socialmedia.jpg";
 import appsteps from "./images/appsteps.png";
 import sliders from "./images/Slider.jpg";
 import Report from './Report';
 import { useNavigate } from 'react-router-dom';
 import { Button, Container, Card,Navbar, Nav, Row, Col } from 'react-bootstrap';
+
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -124,7 +126,7 @@ Sign In
       </Col>
     <Col md className='m-1'>
       <div>
-      <h3 className="">
+      <h3>
                        File your complaints and get a rapid response
                        from our teams.</h3>
                       <p className="file-report-paragraph">
@@ -142,74 +144,98 @@ Sign In
   </Row>
 </Container>
 
-            <section className="testimonials">
+            <Container className="testimonials">
                 <h2>TESTIMONIALS</h2>
                 <h3>What our victors say</h3>
                 <div className="card-group">
-                <div className="card test-card">
+                <Card className="test-card">
                  <img src={staricon} className="card-img-top" alt="5star-icon "/>
-                <div className="card-body">
-      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro debitis laudantium consequatur dolorem sed numquam facere illum, suscipit quibusdam. Magni saepe id enim, accusamus laborum eaque officiis ab aliquam dolore.</p>
-    </div>
-    {/* <div className="card-footer"> */}
-        <img src={avatar} alt="avavtar" className="avatar" />
+                <Card.Body>
+      <Card.Text>Lorem ipsum dolor sit amet, consectetur
+       adipisicing elit. Porro debitis laudantium consequatur dolorem
+        sed numquam facere illum, suscipit quibusdam. Magni saepe id 
+        enim, accusamus laborum eaque officiis ab aliquam dolore.</Card.Text>
+    </Card.Body>
+    <Card.Footer className='border-top-0'>
+        <img src={avatar} alt="avatar" className="avatar" />
       <p className="text-muted mx-2">MUIZ ALABA</p>
       <p className="muiz mx-2">Lagos, Nigeria</p>
-    {/* </div> */}
-  </div>
-  <div className="card test-card">
+      </Card.Footer>
+  </Card>
+
+  <Card className="test-card">
     <img src={staricon} className="card-img-top" alt="5star-icon"/>
-    <div className="card-body">
-      <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, autem cumque aperiam voluptates beatae consequuntur suscipit dolor obcaecati, in, dolorum at quasi minus. Possimus esse atque deserunt omnis cum iure.</p>
-    </div>
-    {/* <div className="card-footer"> */}
-   
+    <Card.Body>
+      <Card.Text>Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Dignissimos, autem cumque aperiam voluptates 
+      beatae consequuntur suscipit dolor obcaecati, in, dolorum at
+       quasi minus. Possimus esse atque deserunt omnis cum iure.</Card.Text>
+    </Card.Body>
+   <Card.Footer className='border-top-0'>
       <img src= {avatar} className="avatar" alt="avatar"/>
       <p className="text-muted mx-2">HENRIETTA A. </p>
       <p className="henrietta mx-2">Kogi, Nigeria</p>
-    {/* </div> */}
-  </div>
-  <div className="card test-card">
+      </Card.Footer>
+  </Card>
+
+  <Card className="test-card">
     <img src= {staricon} className="card-img-top" alt="5star-icon"/>
-    <div className="card-body">
-      <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem saepe harum consectetur reprehenderit, a, laborum cumque facere, explicabo temporibus distinctio unde! Tempora voluptatum et vero tenetur commodi facere, mollitia in.</p>
-    </div>
-         
+    <Card.Body>
+      <Card.Text>Lorem ipsum dolor sit amet 
+      consectetur adipisicing elit. Voluptatem saepe harum
+       consectetur reprehenderit, a, laborum cumque facere, 
+       explicabo temporibus distinctio unde! Tempora voluptatum 
+       et vero tenetur commodi facere, mollitia in.</Card.Text>
+    </Card.Body>
+    <Card.Footer className='border-top-0'>
          <img src={avatar} alt="avavtar-icon" className="avatar" />
          <p className="text-muted mx-2">BARAKAT OKIKI</p>
          <p className="barakat mx-2">Ibadan, Nigeria</p>
-            </div>
+         </Card.Footer>
+            </Card>
             </div>
             <img src={sliders} alt="sliders" className="sliders"/>
-            </section>
+            </Container>
 
-            <div className="anonymous py-5">
-            
+            {/*ANONYMOUS SECTION START*/}
+            <Container fluid className="anonymous py-5">  
          <Row>
           <Col md>
           <img src={anonymous} className="img-fluid rounded-start" 
           alt="anonymous-display"/>
         </Col>
      <Col md className="py-4">
-      <div className="mx-3">
-        <h3 className="fs-2">Stay anonymous while you file your complaints</h3>
-        <p className="mb-1">We can file your complaints while you remain anonymous. <br />We seek to safeguard and protect your identity.</p>
-                 <div className="button">
-                            <Button >Report a crime</Button>
+        <div className='mb-3'>
+        <h3 className='pb-5'>Stay anonymous while you file
+         your complaints</h3>
+        <p className='text-white'>We can file your complaints
+         while you remain anonymous. 
+         <br />We seek to safeguard and protect
+          your identity.</p>
+        </div>
+        <div>
+           <Button >Report a crime</Button>
                  </div>      
-           </div>
             </Col>
             </Row>
-            </div>
-            <footer className="footer-bar">
-                <img src={socialmedia} alt="social-media-icon" className="social-media-icon" />
-                <p className= "footer-p">CFS Interventions</p>
+            </Container>
+            <Container fluid className='footer text-center pt-2 text-white'>
+            <footer >
+              <div className='icons mb-2 fs-3'>
+              <BsTwitter className='mx-2'/>
+              <FaLinkedinIn className='mx-2' />
+              <FaFacebook className='mx-2' />
+              </div>
+              <div>
+              <p>CFS Interventions</p>
                 <p>&copy;2022</p>
-                <ul className="d-block pt-2">
-                    <li><a href="privacy" className="mx-4 ">Privacy policy</a> 
-                    <li><a href="terms" className="mx-4">Terms of use</a></li></li>
+              </div>
+                <ul id='footer-list'>
+                    <li className='mx-4'><a href="privacy">Privacy policy</a> 
+                    <li className='mx-4'><a href="terms" >Terms of use</a></li></li>
                 </ul>
             </footer>
+            </Container>
         </Container>
     );
 }
